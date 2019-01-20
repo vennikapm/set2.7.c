@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+void main()
+{
+int n,num,a,count=0,sum=0,rem,rem1,t;
+scanf("%d",&n);
+while(n>0)
+{
+scanf("%d",&num);
+a=num;
+t=num;
+while(num>0)
+{
+rem=num%10;
+count++;
+num=num/10;
+}
+while(a>0)
+{
+rem1=a%10;
+sum=sum+pow(rem1,count);
+a=a/10;
+}
+if(sum==t)
+{
+printf("armstrong");
+}
+else
+{
+printf("not");
+}
+n--;
+}
+getch();
+}
